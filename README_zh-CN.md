@@ -119,7 +119,7 @@ python run_unified.py --dataset D1 --methods naive_retry sql_aware_retry diagnos
 python run_unified.py --dataset D3 --methods deny_only rule naive_retry sql_aware_retry diagnostic_revision --enable-api --out reproduced_results/D3
 ```
 
-该命令会运行 `frozen_scenarios.jsonl` 当前包含的全部记录。**目前这个文件有 88 条记录，其中交通领域 44 条、能源领域 44 条。** 在把结果作为论文报告的 D3 结果之前，请先确认它与正文所写的案例数量一致。
+该命令会运行 `frozen_scenarios.jsonl` 当前包含的全部记录。**该文件包含 88 条场景记录，其中交通领域 44 条、能源领域 44 条。** 在将实验结果作为论文中的 D3 结果报告前，应核对场景数量、实际使用的场景集合与论文描述是否一致。
 
 ### 3.5 SQLite 执行审计
 
@@ -137,7 +137,7 @@ python verify_sqlite.py --results reproduced_results/D1 --out reproduced_results
 
 仓库保留了 D1 离线基线、三种 LLM 修订方法的逐条结果、manifest、summary 和 SQLite 执行审计。公开版执行审计 CSV 不包含原始数据库结果样本，也不重复保存基准问题和原始 SQL；这些上下文可通过 `scenario_id` 与下载的数据关联。执行状态统计和查询输出哈希没有因此改变。部分结果中的候选 SQL 与初始获授权记录的基准 SQL 相同；再次分发或使用这些记录时，应遵守上游数据许可并引用原始数据集。
 
-你上传的工程包没有包含 D3 结果文件，也没有包含单独的人工语义审计表。因此当前版本包含 D3 场景源文件，但还不能声称已完整复现 D3 的论文结果。请查看 [`docs/PREPUBLICATION_CHECKLIST.md`](docs/PREPUBLICATION_CHECKLIST.md)。
+当前仓库包含冻结的 D3 场景文件，但尚未包含 D3 实验输出 JSONL、manifest、summary，以及独立的人工语义审计表。在核对场景数量、论文描述和审计版本之前，不应将 D3 结果表述为论文结果的完整复现。详细状态见 [`docs/REPRODUCIBILITY_NOTES.md`](docs/REPRODUCIBILITY_NOTES.md)。
 
 ## 5. 解释边界
 
@@ -153,10 +153,10 @@ python verify_sqlite.py --results reproduced_results/D1 --out reproduced_results
 - Yu, T., Zhang, R., Yang, K., et al. (2018). *Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task*. EMNLP 2018. [Spider 项目](https://yale-lily.github.io/spider)。
 
 
-## GitHub 发布
+## 复现状态
 
-Windows 本地发布步骤见 [`docs/GITHUB_PUBLISHING.md`](docs/GITHUB_PUBLISHING.md)。发布前请完成 [`docs/PREPUBLICATION_CHECKLIST.md`](docs/PREPUBLICATION_CHECKLIST.md)，并与共同作者确认代码许可及实验结果的公开范围。
+D1、D3 当前包含的实验材料、数据版本及发布注意事项见 [`docs/REPRODUCIBILITY_NOTES.md`](docs/REPRODUCIBILITY_NOTES.md)。
 
-## 代码许可状态
+## 代码许可
 
-本包尚未指定本项目代码的许可证。正式作为可复用的开源软件发布前，请与共同作者确认许可，并添加对应的 `LICENSE` 文件。外部数据仍遵循其自身许可；公开代码不会改变外部数据的许可条件。
+当前仓库尚未提供本项目代码的许可证。若要以开源软件形式再分发代码，项目贡献者应先确认许可证并添加相应的 `LICENSE` 文件。外部数据仍受各自许可证约束。

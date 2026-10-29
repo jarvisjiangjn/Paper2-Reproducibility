@@ -8,6 +8,7 @@ data/access_control_dataset.jsonl
 data/spider/
 
 # Python artifacts and virtual environments
+.pytest_cache/
 __pycache__/
 *.py[cod]
 .venv/

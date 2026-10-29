@@ -115,7 +115,7 @@ The runner writes JSONL outputs, a manifest, and `summary.json`. The manifest re
 python run_unified.py --dataset D3 --methods deny_only rule naive_retry sql_aware_retry diagnostic_revision --enable-api --out reproduced_results/D3
 ```
 
-This command runs all rows currently present in `frozen_scenarios.jsonl`. **The supplied file currently contains 88 rows: 44 transport scenarios and 44 energy scenarios.** Reconcile this count with the manuscript's D3 sample description before treating these outputs as the exact results reported in the paper.
+This command runs all records in `frozen_scenarios.jsonl`. The file contains 88 scenarios: 44 transport scenarios and 44 energy scenarios. Confirm that this scenario count and the selected scenario set match the manuscript before reporting the results as the paper’s D3 results.
 
 ### 3.5 SQLite execution audit
 
@@ -133,7 +133,7 @@ The audit only executes candidates that pass both the authorization gate and dep
 
 The repository retains the D1 baseline JSONL files, the three D1 LLM result files, their manifests and summary, and the execution-audit CSV. The released execution-audit CSV omits raw result-row samples and duplicated benchmark question/reference SQL text; this does not change the execution status counts or query-output hashes. The original context can be joined from the downloaded D1 input using `scenario_id`. Some result records retain candidate SQL that is identical to the benchmark reference SQL for initially permitted cases; follow the source dataset's terms and cite the upstream datasets when redistributing or reusing those records.
 
-The supplied archive did not contain D3 result files or the separate manual semantic-audit spreadsheet. The frozen D3 scenarios are included, but the D3 results and human semantic labels must be added only after the manuscript's sample count and the exact audit version have been reconciled. See [`docs/PREPUBLICATION_CHECKLIST.md`](docs/PREPUBLICATION_CHECKLIST.md).
+The repository currently includes the frozen D3 scenarios but does not include D3 output JSONL files, a D3 manifest or summary, or the separate manual semantic-audit spreadsheet. D3 results and human semantic labels should be reported only after the scenario count, manuscript description, and audit version have been reconciled. See [`docs/REPRODUCIBILITY_NOTES.md`](docs/REPRODUCIBILITY_NOTES.md).
 
 ## 5. Interpretation and limitations
 
@@ -151,10 +151,10 @@ Please cite the Spider access-control dataset and the original Spider benchmark 
 - Yu, T., Zhang, R., Yang, K., et al. (2018). *Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task*. EMNLP 2018. [Spider project](https://yale-lily.github.io/spider).
 
 
-## GitHub 发布
+## Reproducibility status
 
-Windows 本地发布步骤见 [`docs/GITHUB_PUBLISHING.md`](docs/GITHUB_PUBLISHING.md)。发布前请完成 [`docs/PREPUBLICATION_CHECKLIST.md`](docs/PREPUBLICATION_CHECKLIST.md)，并与共同作者确认代码许可及实验结果的公开范围。
+The current status of the included D1 and D3 artifacts, data versions, and release requirements is documented in [`docs/REPRODUCIBILITY_NOTES.md`](docs/REPRODUCIBILITY_NOTES.md).
 
-## License status
+## License
 
-A license for this project's own code has not yet been assigned in this package. Before presenting the repository as reusable open-source software, agree on a license with the co-authors and add the corresponding `LICENSE` file. External datasets retain their own terms; publishing this code does not override those terms.
+No license file is currently provided for this repository. Before redistributing the code as open-source software, the project contributors should agree on a license and add the corresponding `LICENSE` file. External datasets remain subject to their own license terms.

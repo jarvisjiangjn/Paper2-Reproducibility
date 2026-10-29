@@ -1,7 +1,6 @@
 """OpenAI-compatible API request helper used by the Paper 2 revision methods.
 
-The request logic and prompt wording are preserved from the supplied experiment
-implementation so the cleanup does not silently change the model-call protocol.
+Implements the model request protocol used by the Paper 2 revision methods.
 """
 from __future__ import annotations
 import json
