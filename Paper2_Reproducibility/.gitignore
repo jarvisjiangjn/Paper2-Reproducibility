@@ -1,0 +1,22 @@
+# Local secrets and provider configuration
+config.json
+.env
+.env.*
+
+# Downloaded datasets (obtain from the official sources described in README.md)
+data/access_control_dataset.jsonl
+data/spider/
+
+# Python artifacts and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Temporary files and locally generated exploratory outputs
+*.tmp
+unified_results/
+reproduced_results/
+pilot_results/
+.DS_Store
+Thumbs.db

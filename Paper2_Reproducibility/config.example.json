@@ -1,0 +1,10 @@
+{
+  "models": {
+    "recovery": {
+      "base_url": "https://api.siliconflow.cn/v1",
+      "model": "deepseek-ai/DeepSeek-V4-Flash",
+      "timeout": 240,
+      "retries": 4
+    }
+  }
+}

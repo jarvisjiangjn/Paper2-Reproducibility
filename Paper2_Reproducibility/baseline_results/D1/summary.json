@@ -1,0 +1,32 @@
+{
+  "dataset": "D1",
+  "input_sha256": "0e56c06e9fd526496d25dd4d5fb5bf6e88fbe518168a844cba78140f884d7ac4",
+  "processed": 19624,
+  "initial_status": {
+    "permit": 7781,
+    "unauthorized": 11127,
+    "deny": 716
+  },
+  "methods": {
+    "deny_only": {
+      "records": 19624,
+      "decisions": {
+        "permit": 7781,
+        "deny": 11843
+      },
+      "api_calls": 0,
+      "api_errors": 0
+    },
+    "rule": {
+      "records": 19624,
+      "decisions": {
+        "permit": 7781,
+        "deny": 11748,
+        "revised_permit": 95
+      },
+      "api_calls": 0,
+      "api_errors": 0
+    }
+  },
+  "note": "Model call outcomes and authorization acceptance do not prove semantic recovery"
+}

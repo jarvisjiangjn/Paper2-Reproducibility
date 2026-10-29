@@ -1,0 +1,43 @@
+{
+  "dataset": "D1",
+  "input_sha256": "0e56c06e9fd526496d25dd4d5fb5bf6e88fbe518168a844cba78140f884d7ac4",
+  "processed": 19624,
+  "initial_status": {
+    "permit": 7781,
+    "unauthorized": 11127,
+    "deny": 716
+  },
+  "methods": {
+    "naive_retry": {
+      "records": 19624,
+      "decisions": {
+        "permit": 7781,
+        "deny": 9989,
+        "revised_permit": 1854
+      },
+      "api_calls": 11127,
+      "api_errors": 0
+    },
+    "sql_aware_retry": {
+      "records": 19624,
+      "decisions": {
+        "permit": 7781,
+        "deny": 11489,
+        "revised_permit": 354
+      },
+      "api_calls": 11127,
+      "api_errors": 0
+    },
+    "diagnostic_revision": {
+      "records": 19624,
+      "decisions": {
+        "permit": 7781,
+        "deny": 11362,
+        "revised_permit": 481
+      },
+      "api_calls": 11127,
+      "api_errors": 0
+    }
+  },
+  "note": "Model call outcomes and authorization acceptance do not prove semantic recovery"
+}

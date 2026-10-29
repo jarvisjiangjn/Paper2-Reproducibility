@@ -1,0 +1,8 @@
+{
+  "corpus_databases": 153,
+  "matched_sqlite": 153,
+  "missing_count": 0,
+  "missing": [],
+  "invalid": [],
+  "example_expected": "data/spider/database/<db_id>/<db_id>.sqlite"
+}

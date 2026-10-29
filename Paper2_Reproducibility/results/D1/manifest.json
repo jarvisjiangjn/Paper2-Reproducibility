@@ -1,0 +1,15 @@
+{
+  "protocol": "unified_v1",
+  "dataset": "D1",
+  "input_sha256": "0e56c06e9fd526496d25dd4d5fb5bf6e88fbe518168a844cba78140f884d7ac4",
+  "methods": [
+    "naive_retry",
+    "sql_aware_retry",
+    "diagnostic_revision"
+  ],
+  "max_cases": 0,
+  "eligible_only": false,
+  "model": "deepseek-ai/DeepSeek-V4-Flash",
+  "base_url": "https://api.siliconflow.cn/v1",
+  "policy": "All outputs rechecked by compiler gate and independent audit; semantic fidelity not certified"
+}
